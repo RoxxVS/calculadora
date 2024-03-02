@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+/*
+.kode-mono-<uniquifier> {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+*/
+:root {
+    --color-oscuro: #0A0A0A;
+    --color-claro: #FEFEFE;
+    --color-rosa-oscuro: #FFCBCB;
+    --color-rosa-claro: #FEE9E9;
+    --color-gris: #BABABA;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 5%;
+    background-color: var(--color-oscuro);
+    font-family: "Kode Mono", monospace;
+    color: var(--color-oscuro);
+}
+div.calculadora {
+    margin: 0 auto;
+    padding: 5%;
+    width: 35vw;
+    height: calc(35vw * 1.5);
+    max-height: 80vh;
+    background-image: url("assests/img/fondo.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    border: 2px solid var(--color-rosa-oscuro);
+    border-radius: 10px;
+}
+div.calculadora div.pantalla {
+    margin: 0 auto;
+    padding: 2%;
+    width: 100%;
+    height: 25%;
+    background-color: var(--color-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-rosa-oscuro);
+    overflow: scroll;
+    scrollbar-color: var(--color-rosa-oscuro);
+    scrollbar-width: 100%;
+    border-radius: 10px;
+}
+div.calculadora div.pantalla:hover {
+    cursor: pointer;
+}
+div.calculadora div.pantalla p {
+    text-align: end;
+    font-size: 3vw;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+div.calculadora div.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 75%;
+}
+div.calculadora div.botones div.boton {
+    display: flex;
+    background-color: var(--color-gris);
+    border: 2px solid var(--color-rosa-oscuro);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+div.calculadora div.botones div.boton:hover {
+    background-color: var(--color-rosa-oscuro);
+    cursor: pointer;
+}
+div.calculadora div.botones div.boton:active {
+    box-shadow: 0 0 5px 5px var(--color-rosa-claro);
+    transform: scale(0.9);
+}
+div.calculadora div.botones div.boton p {
+    display: block;
+    font-size: 2vw;
+}
+@media only screen and (max-width: 800px) {
+    div.calculadora {
+        margin-top: 10vh;
+        width: 60vw;
+        height: calc(60vw * 1.3);
+        max-width: 90vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    div.calculadora {
+        margin-top: 20vh;
+        width: 75vw;
+        height: calc(60vw * 1.5);
+        max-width: 90vw;
+    }
+}
